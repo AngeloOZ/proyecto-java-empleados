@@ -12,7 +12,6 @@ import org.crud.empleados.domain.Empleado;
 
 public class EmpleadoDAO {
     // Commit
-    // commit 2
     private static final String GET_EMPLEADOS = "SELECT id, nombre, correo , p.puesto_id, nombre_puesto FROM empleado e left join puesto p on (e.puesto_id = p.puesto_id) ";
 
     private static final String GET_EMPLEADO_BY_ID = "SELECT id, nombre, correo ,  p.puesto_id, nombre_puesto FROM empleado e left join puesto p on (e.puesto_id = p.puesto_id) where id = ?";
