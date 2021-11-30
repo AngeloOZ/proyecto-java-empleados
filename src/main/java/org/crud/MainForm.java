@@ -132,6 +132,8 @@ public class MainForm extends JFrame {
     }
     
     private void asignarPuestoClicked(ActionEvent event) {
+        PuestosDialog puestosDialog = new PuestosDialog(this);
+        puestosDialog.setVisible(true);
         PuestoDAO puestoDAO = new PuestoDAO();
         List<Puesto> puestos = puestoDAO.getPuestos();
         String[] puestosChoice =  puestos.stream().map(puesto->puesto.getNombre()).collect( Collectors.toList() ).toArray(new String[] {});
@@ -250,7 +252,7 @@ public class MainForm extends JFrame {
         String idField = idTextField.getText();
         if (!idField.isEmpty()) {
             if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this,
-                    "¿Esta seguro de que desea borrar el empleado?", "Pregunta", JOptionPane.YES_NO_OPTION)) {
+                    "ï¿½Esta seguro de que desea borrar el empleado?", "Pregunta", JOptionPane.YES_NO_OPTION)) {
                 long id = Long.parseLong(idField);
                 EmpleadoDAO empleadoDAO = new EmpleadoDAO();
                 try {
@@ -275,7 +277,7 @@ public class MainForm extends JFrame {
     }
 
     public boolean isCorreoValido(String email) {
-        String regex = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+        String regex = "^[a-zA-Z0-9_!#$%&ï¿½*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
