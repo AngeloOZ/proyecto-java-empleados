@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Entry Form
+ Hola bola
  *
  */
 public class App {
