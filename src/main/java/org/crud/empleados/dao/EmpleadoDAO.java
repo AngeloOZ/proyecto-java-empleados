@@ -27,13 +27,13 @@ public class EmpleadoDAO {
 
     private static final String GET_LAST_ID = "SELECT MAX(id) as id FROM empleado";
 
-    public int getLastId()  throws ClassNotFoundException, SQLException {
-        int id = -1;
+    public long getLastId()  throws ClassNotFoundException, SQLException {
+        long id = -1;
         try (Connection connection = DatabaseConnection.getConnection()) {
             Statement stmt = connection.createStatement();
             ResultSet resultSet = stmt.executeQuery(GET_LAST_ID);
             while (resultSet.next()) {
-                id = resultSet.getInt("id");
+                id = resultSet.getLong("id");
             }
         } finally {
 

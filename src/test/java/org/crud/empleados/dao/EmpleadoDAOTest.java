@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  */
 public class EmpleadoDAOTest {
     
-    public static int ID_EMPLEADO_TEST;
+    public static long ID_EMPLEADO_TEST;
     
     public EmpleadoDAOTest() {
     }
@@ -42,13 +42,15 @@ public class EmpleadoDAOTest {
      */
     @Test
     public void testGetEmpleado() throws Exception {
-//        System.out.println("getEmpleado");
-//        long id = 0L;
-//        EmpleadoDAO instance = new EmpleadoDAO();
-//        Empleado expResult = null;
-//        Empleado result = instance.getEmpleado(id);
-//        assertEquals(expResult, result);
-//        fail("The test case is a prototype.");
+        System.out.println("getEmpleado");
+        EmpleadoDAO instance = new EmpleadoDAO();
+        long id = instance.getLastId();
+        Empleado result = instance.getEmpleado(id);
+
+        long resultID = result.getId();
+        if(resultID != id){
+            fail("error pero no se porque");
+        }
     }
 
     /**
@@ -59,9 +61,8 @@ public class EmpleadoDAOTest {
         System.out.println("saveEmpleado");
         Empleado empleado = new Empleado();
         
-        empleado.setNombre("pruebaTest");
-        empleado.setCorreo("prueba@test.unit");
-        empleado.setId(Long.MIN_VALUE);
+        empleado.setNombre("pruebaTest1");
+        empleado.setCorreo("prueba1@test.unit");
        
         EmpleadoDAO empleadoDAO = new EmpleadoDAO();
         boolean expResult = true;
@@ -77,13 +78,12 @@ public class EmpleadoDAOTest {
      */
     @Test
     public void testDeleteEmpleado() throws Exception {
-//        System.out.println("deleteEmpleado");
-//        Long id = null;
-//        EmpleadoDAO instance = new EmpleadoDAO();
-//        boolean expResult = false;
-//        boolean result = instance.deleteEmpleado(id);
-//        assertEquals(expResult, result);
-//        fail("The test case is a prototype.");
+        System.out.println("deleteEmpleado");
+        long id = ID_EMPLEADO_TEST;
+        EmpleadoDAO instance = new EmpleadoDAO();
+        boolean expResult = true;
+        boolean result = instance.deleteEmpleado(id);
+        assertEquals(expResult, result);
     }
 
     /**
@@ -91,12 +91,15 @@ public class EmpleadoDAOTest {
      */
     @Test
     public void testSetPuestoToEmpleado() throws Exception {
-//        System.out.println("setPuestoToEmpleado");
-//        Long empleadoId = null;
-//        Long puestoId = null;
-//        EmpleadoDAO instance = new EmpleadoDAO();
-//        instance.setPuestoToEmpleado(empleadoId, puestoId);
-//        fail("The test case is a prototype.");
+        System.out.println("setPuestoToEmpleado");
+        EmpleadoDAO instance = new EmpleadoDAO();
+        long empleadoId = instance.getLastId();
+        long puestoId = 1;
+        instance.setPuestoToEmpleado(empleadoId, puestoId);
+        Empleado empleado = new Empleado();
+        empleado = instance.getEmpleado(empleadoId);
+        
+        assertNotNull("message", empleado.getPuesto());
     }
     
 }
