@@ -13,6 +13,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.util.Properties;
 import org.crud.empleados.dao.DatabaseConnection;
@@ -25,23 +26,12 @@ import java.sql.SQLException;
  *
  * @author chimb
  */
-public class DatabaseConectionTest {
-     private static Properties properties;
-         private static final Logger logger = LoggerFactory.getLogger(DatabaseConnection.class);
-     static {
-        properties = new Properties();
-        try (InputStream in = new FileInputStream("database.properties")) {
-            properties.load(in);
-        } catch (Exception ex) {
-            logger.error(ex.getMessage(), ex);
-        }
-    }
-    @Test
-    
-    public void test() throws SQLException {
-        final String url = properties.getProperty("database.url");
-        final String userName = properties.getProperty("database.username");
-        final String password = properties.getProperty("database.password");
-        final Connection connection = DriverManager.getConnection(url, userName, password);
+public class DatabaseConectionTest{
+    @Test 
+    public void testDataBaseConection() throws SQLException, ClassNotFoundException{
+        Connection connection = DatabaseConnection.getConnection();
+        DatabaseMetaData metadata=connection.getMetaData();
+        String url = metadata.getURL();
+        assertEquals("jdbc:h2:./empleados",url);
     }
 }
