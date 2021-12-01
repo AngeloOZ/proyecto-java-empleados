@@ -1,12 +1,12 @@
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\helpers\Constants.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\empleados\dao\PuestoDAO.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\empleados\dao\EmpleadoDAO.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\App.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\empleados\domain\Empleado.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\helpers\ImageScaling.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\empleados\domain\Puesto.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\MainForm.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\PuestosDialog.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\empleados\dao\DatabaseConnection.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\empleados\dao\EmpleadoImagenDAO.java
-C:\Users\chimb\Documents\OCTAVO\Validación y Verificación de SW\java-crud\src\main\java\org\crud\empleados\domain\EmpleadoImagen.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\PuestosDialog.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\empleados\dao\DatabaseConnection.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\helpers\Constants.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\empleados\dao\PuestoDAO.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\empleados\dao\EmpleadoDAO.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\MainForm.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\App.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\empleados\domain\Puesto.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\empleados\dao\EmpleadoImagenDAO.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\empleados\domain\Empleado.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\empleados\domain\EmpleadoImagen.java
+D:\Documentos\NetBeansProjects\proyecto-java-empleados\src\main\java\org\crud\helpers\ImageScaling.java

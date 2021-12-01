@@ -11,6 +11,7 @@ import java.util.List;
 import org.crud.empleados.domain.Empleado;
 
 public class EmpleadoDAO {
+
     // Commit
     private static final String GET_EMPLEADOS = "SELECT id, nombre, correo , p.puesto_id, nombre_puesto FROM empleado e left join puesto p on (e.puesto_id = p.puesto_id) ";
 
@@ -21,8 +22,24 @@ public class EmpleadoDAO {
     private static final String UPDATE_EMPLEADO = "update empleado set nombre = ? , correo = ? where id = ?";
 
     private static final String DELETE_EMPLEADO = "delete from empleado where id = ?";
-    
+
     private static final String SET_PUESTO = "update empleado set puesto_id = ? where id =? ";
+
+    private static final String GET_LAST_ID = "SELECT MAX(id) as id FROM empleado";
+
+    public int getLastId()  throws ClassNotFoundException, SQLException {
+        int id = -1;
+        try (Connection connection = DatabaseConnection.getConnection()) {
+            Statement stmt = connection.createStatement();
+            ResultSet resultSet = stmt.executeQuery(GET_LAST_ID);
+            while (resultSet.next()) {
+                id = resultSet.getInt("id");
+            }
+        } finally {
+
+        }
+        return id;
+    }
 
     public List<Empleado> getEmpleados() throws ClassNotFoundException, SQLException {
         List<Empleado> empleados = new ArrayList<>();
@@ -34,8 +51,8 @@ public class EmpleadoDAO {
                 empleado.setId(resultSet.getLong("id"));
                 empleado.setNombre(resultSet.getString("nombre"));
                 empleado.setCorreo(resultSet.getString("correo"));
-                empleado.setPuesto( resultSet.getLong("puesto_id") );
-                empleado.setPuestoNombre( resultSet.getString("nombre_puesto") );
+                empleado.setPuesto(resultSet.getLong("puesto_id"));
+                empleado.setPuestoNombre(resultSet.getString("nombre_puesto"));
                 empleados.add(empleado);
             }
         } finally {
@@ -55,12 +72,13 @@ public class EmpleadoDAO {
                 empleado.setId(resultSet.getLong("id"));
                 empleado.setNombre(resultSet.getString("nombre"));
                 empleado.setCorreo(resultSet.getString("correo"));
-                empleado.setPuesto( resultSet.getLong("puesto_id") );
+                empleado.setPuesto(resultSet.getLong("puesto_id"));
                 empleado.setPuestoNombre(resultSet.getString("nombre_puesto"));
             }
         } finally {
 
         }
+        System.out.println(empleado);
         return empleado;
     }
 
@@ -100,13 +118,12 @@ public class EmpleadoDAO {
         }
         return success;
     }
-    
-    
-    public void setPuestoToEmpleado( Long empleadoId, Long puestoId ) throws SQLException, ClassNotFoundException {
+
+    public void setPuestoToEmpleado(Long empleadoId, Long puestoId) throws SQLException, ClassNotFoundException {
         try (Connection connection = DatabaseConnection.getConnection()) {
-            PreparedStatement psmt = connection.prepareStatement( SET_PUESTO );
+            PreparedStatement psmt = connection.prepareStatement(SET_PUESTO);
             psmt.setLong(1, puestoId);
-            psmt.setLong(2, empleadoId );
+            psmt.setLong(2, empleadoId);
             psmt.execute();
         } finally {
 
