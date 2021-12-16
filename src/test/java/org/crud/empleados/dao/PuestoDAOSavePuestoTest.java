@@ -18,10 +18,9 @@ public class PuestoDAOSavePuestoTest {
     }
    @Test
 public void testSavePuesto() throws Exception {
-System.out.println("savePuesto");
 PuestoDAO instance = new PuestoDAO();
 Puesto puesto = new Puesto();
-puesto.setNombre("obrero");
+puesto.setNombre("barrendero");
 boolean x = instance.savePuesto(puesto);
 assertEquals(true, x);
 }

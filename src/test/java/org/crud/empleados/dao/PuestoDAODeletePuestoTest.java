@@ -23,7 +23,6 @@ public class PuestoDAODeletePuestoTest {
     
 @Test
 public void testDeletePuesto() throws Exception {
-System.out.println("deletePuesto");
 long id = 2;
 PuestoDAO instance = new PuestoDAO();
 boolean x = instance.deletePuesto(id);

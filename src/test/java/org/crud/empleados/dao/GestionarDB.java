@@ -1,4 +1,4 @@
-package org.crud;
+package org.crud.empleados.dao;
 import org.crud.CrearConexion;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

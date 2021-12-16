@@ -7,6 +7,7 @@ package org.crud;
 import org.crud.empleados.dao.GestionarDB;
 import org.crud.empleados.dao.GestionarEmpleado;
 import org.crud.empleados.dao.GestionarEmpleadoImagen;
+import org.crud.empleados.dao.GestionarPuesto;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
