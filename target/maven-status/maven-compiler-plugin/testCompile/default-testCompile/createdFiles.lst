@@ -1,2 +1,6 @@
 org\crud\DatabaseConectionTest.class
+org\crud\empleados\dao\EmpleadoTestSuite.class
+org\crud\empleados\dao\EmpleadoImagenDAOTest.class
+org\crud\empleados\dao\EmpleadoDAOTest.class
+org\crud\empleados\dao\PuestoDAOTest.class
 org\crud\AppTest.class
