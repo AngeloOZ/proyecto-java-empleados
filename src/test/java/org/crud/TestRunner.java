@@ -16,7 +16,7 @@ public class TestRunner {
       Result result = JUnitCore.runClasses(GestionarDB.class);
       Result result1=JUnitCore.runClasses(GestionarEmpleado.class);
       Result result2=JUnitCore.runClasses(GestionarEmpleadoImagen.class);
-
+      Result result3=JUnitCore.runClasses(GestionarPuesto.class);
       for (Failure failure : result.getFailures()) {
          System.out.println(failure.toString());
       }
@@ -24,5 +24,6 @@ public class TestRunner {
       System.out.println(result.wasSuccessful());
       System.out.println(result1.wasSuccessful());
       System.out.println(result2.wasSuccessful());
+      System.out.println(result3.wasSuccessful());
    }
 }
