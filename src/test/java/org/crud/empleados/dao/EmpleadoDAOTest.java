@@ -69,7 +69,7 @@ public class EmpleadoDAOTest {
         boolean result = empleadoDAO.saveEmpleado(empleado);
         
         ID_EMPLEADO_TEST = empleadoDAO.getLastId();
-        System.out.println("Id de insercsion: " + ID_EMPLEADO_TEST);               
+//        System.out.println("Id de insercsion: " + ID_EMPLEADO_TEST);               
         assertEquals(expResult, result);
     }
 
