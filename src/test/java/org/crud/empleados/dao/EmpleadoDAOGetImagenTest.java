@@ -16,7 +16,6 @@ public class EmpleadoDAOGetImagenTest {
     }
     @Test
     public void testGetImagen() {
-        System.out.println("getImagen");
         long id = 2;
         boolean x = false;
         EmpleadoImagenDAO empleadoImagenDAO = new EmpleadoImagenDAO();
