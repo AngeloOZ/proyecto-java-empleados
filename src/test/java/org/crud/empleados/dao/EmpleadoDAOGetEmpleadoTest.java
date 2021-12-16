@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Angello Ordoñez
+ * @author Angello Ordoï¿½ez
  */
 public class EmpleadoDAOGetEmpleadoTest {
 
@@ -22,7 +22,6 @@ public class EmpleadoDAOGetEmpleadoTest {
 
     @Test
     public void testGetEmpleado() throws Exception {
-        System.out.println("getEmpleado");
         EmpleadoDAO instance = new EmpleadoDAO();
         long id = instance.getLastId();
         Empleado result = instance.getEmpleado(id);

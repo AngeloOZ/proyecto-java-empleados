@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Angello Ordoñez
+ * @author Angello Ordoï¿½ez
  */
 public class EmpleadoDAOSetPuestoTest {
 
@@ -20,7 +20,6 @@ public class EmpleadoDAOSetPuestoTest {
 
     @Test
     public void testSetPuestoToEmpleado() throws Exception {
-        System.out.println("setPuestoToEmpleado");
         EmpleadoDAO instance = new EmpleadoDAO();
         long empleadoId = instance.getLastId();
         long puestoId = 1;

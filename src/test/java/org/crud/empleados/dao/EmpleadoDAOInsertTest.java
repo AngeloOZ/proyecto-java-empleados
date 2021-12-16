@@ -11,7 +11,7 @@ import org.crud.empleados.domain.Empleado;
 
 /**
  *
- * @author Angello Ordoñez
+ * @author Angello Ordoï¿½ez
  */
 public class EmpleadoDAOInsertTest {
     
@@ -20,7 +20,6 @@ public class EmpleadoDAOInsertTest {
     
     @Test
     public void testSaveEmpleado() throws Exception {
-        System.out.println("saveEmpleado");
         Empleado empleado = new Empleado();
         
         empleado.setNombre("pruebaTest1");

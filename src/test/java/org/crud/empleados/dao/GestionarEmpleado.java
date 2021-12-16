@@ -10,13 +10,14 @@ import org.junit.runners.Suite;
 
 /**
  *
- * @author Angello Ordoñez
+ * @author Angello Ordoï¿½ez
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ org.crud.empleados.dao.EmpleadoDAOInsertTest.class,
+@Suite.SuiteClasses({ 
+    org.crud.empleados.dao.EmpleadoDAOInsertTest.class,
     org.crud.empleados.dao.EmpleadoDAODeleteTest.class,
     org.crud.empleados.dao.EmpleadoDAOSetPuestoTest.class,
     org.crud.empleados.dao.EmpleadoDAOGetEmpleadoTest.class })
-public class EmpleadoDAOTestSuite {
+public class GestionarEmpleado {
     
 }
