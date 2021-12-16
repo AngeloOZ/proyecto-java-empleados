@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Angello Ordoñez
+ * @author Angello Ordoï¿½ez
  */
 public class EmpleadoDAODeleteTest {
     
@@ -19,7 +19,6 @@ public class EmpleadoDAODeleteTest {
     
     @Test
     public void testDeleteEmpleado() throws Exception {
-        System.out.println("deleteEmpleado");
         EmpleadoDAO instance = new EmpleadoDAO();
         long id = instance.getLastId();
         boolean expResult = true;
