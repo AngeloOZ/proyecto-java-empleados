@@ -23,7 +23,6 @@ public class EmpleadoDAOSaveImagenTest {
     
     @Test
     public void testSaveEmpleadoImagen() throws IOException {
-        System.out.println("saveEmpleadoImagen");
         File selectedFile = new File(".\\gato.jpg");
         ImageScaling imageScaling = new ImageScaling(Constants.SCALE_FACTOR);
         byte[] data = Files.readAllBytes(Paths.get(selectedFile.toURI()));
