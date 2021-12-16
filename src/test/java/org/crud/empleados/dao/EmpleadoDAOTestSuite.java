@@ -5,7 +5,6 @@
  */
 package org.crud.empleados.dao;
 
-import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -14,8 +13,10 @@ import org.junit.runners.Suite;
  * @author Angello Ordoñez
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({org.crud.empleados.dao.EmpleadoDAOTest.class})
-public class EmpleadoTestSuite {
-    
+@Suite.SuiteClasses({ org.crud.empleados.dao.EmpleadoDAOInsertTest.class,
+    org.crud.empleados.dao.EmpleadoDAODeleteTest.class,
+    org.crud.empleados.dao.EmpleadoDAOSetPuestoTest.class,
+    org.crud.empleados.dao.EmpleadoDAOGetEmpleadoTest.class })
+public class EmpleadoDAOTestSuite {
     
 }
