@@ -34,7 +34,6 @@ public class EmpleadoDAOGetEmpleadoTest {
 
     @Test
     public void testGetEmpleados() throws Exception {
-        System.out.println("getEmpleados");
         EmpleadoDAO instance = new EmpleadoDAO();
         List<Empleado> expResult = new ArrayList<>();
         List<Empleado> result = instance.getEmpleados();
